@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Quiz Game</h1>
+    </header>
+
+    <main>
+        <!-- Category Selection -->
+        <section id="category-section">
+            <h2>Select a Category</h2>
+            <button onclick="startQuiz('general')">General Knowledge</button>
+            <button onclick="startQuiz('science')">Science</button>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="hidden">
+            <h2 id="question"></h2>
+            <div id="answers"></div>
+            <p id="feedback"></p>
+            <p>Score: <span id="score-value">0</span></p>
+            <p>Time left: <span id="timer">10</span> seconds</p>
+            <button id="next-btn" class="hidden" onclick="nextQuestion()">Next Question</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
